@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/pico.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='custom.css')}}">
+    <title>SLB Search</title>
+</head>
+<body>
+    <main class="container">
+        <h1>[대법원] SLB Search</h1>
+        <nav>
+            <ul>
+                <li>
+                  <form class="form dark noshowing">
+                    <input id="changeBtn_dark" type="button" value="🌚"/>
+                  </form>
+                </li>
+                <li>
+                  <form class="form light showing">
+                    <input id="changeBtn_light" type="button" value="🌞"/>
+                  </form>
+                </li>
+            </ul>
+        </nav>
+        <h4>SLB Vserver 검색<h4>
+            <form action='/lbvserver'>
+                <input type='text' name='name' placeholder='Host name' >
+                <input type='text' name='ip' placeholder='ip'>
+                <button>Search</button>
+            </form>    
+        <h4>SLB Vserver 속성 검색<h4>
+            <form action='/lbvserver_binding'>
+                <input type='text' name='name' placeholder='Host name'>
+                <input type='text' name='ip' placeholder='ip'>
+                <input type='text' name='vserver' placeholder='Vserver명' required>
+                <button>Search</button>
+            </form>  
+    </main>
+    <script src="{{ url_for('static', filename ='js/theme.js')}}"></script>  
+</body>
+</html>

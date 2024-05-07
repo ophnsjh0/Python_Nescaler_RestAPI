@@ -4,7 +4,7 @@ login = {
     "login":
     {
         "username":"nsroot",
-        "password":"wkdb1100",
+        "password":"nsroot",
         "timeout" : "3600"
     }    
 }

@@ -13,7 +13,7 @@ login = {
 
 
 def nitro_login():
-    url = 'https://172.20.2.8/nitro/v1/config/login'
+    url = 'https://10.10.10.10/nitro/v1/config/login'
     # headers = {'Content-Type' : 'application/vnd.com.citrix.netscaler.login+json'}
     headers = {'Content-Type':'application/json' }
     response = requests.post(url, json=login, headers=headers, verify=False)
